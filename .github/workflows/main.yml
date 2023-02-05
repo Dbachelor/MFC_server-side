@@ -26,6 +26,8 @@ jobs:
 
         - name: Zip the repository
           run: zip -r ${{env.DEPLOY_PACKAGE_NAME}} ./ -x *.git*
+        - name: Set output
+          run: echo "{name}={value}" >> $GITHUB_OUTPUT
 
         - name: Configure AWS Credentials
           uses: aws-actions/configure-aws-credentials@v1
