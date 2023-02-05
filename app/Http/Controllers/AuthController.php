@@ -11,9 +11,14 @@ class AuthController extends Controller
 {
     //
     public function registerUser(Request $request){
-        $user =  RegistrationService::registerUser($request);
-        if($user->status) return EmailService::sendCustomerEmail($user);
-        return $user;
+        //return $request->all()['email'];
+        $register =  RegistrationService::registerUser($request);
+        if ($register['status']){
+            EmailService::sendCustomerEmail($request);
+            return $register;
+        }
+            
+        return $register;
     }
 
     public function loginUser(Request $request){

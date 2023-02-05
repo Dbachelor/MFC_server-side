@@ -32,9 +32,10 @@ class LoginService
             ];
         } else {
             $token = $this->user->createToken('my-fuel-credit')->plainTextToken;
-            $response = [
+            $response = ['data'=>[
                 'user' => $this->user,
                 'token' => $token,
+            ]
             ];
         }
         return response($response, 201);
