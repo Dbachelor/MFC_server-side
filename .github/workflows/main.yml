@@ -3,7 +3,7 @@ name: mfc-demo
 env:
   "S3_BUCKET_NAME": "mfc-demo"
   "EBS_APPLICATION_NAME": "MFC"
-  "EBS_ENVIRONMENT_NAME": "MFC-env"
+  "EBS_ENVIRONMENT_NAME": "Mfc-env"
   "AWS_REGION": "us-east-1"
   "DEPLOY_PACKAGE_NAME": "mfc-app-${{github.sha}}.zip"
   
