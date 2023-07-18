@@ -19,9 +19,8 @@ class LoginService
             ];
             
         }
-
+        
         return $this;
-
     }
 
     public function generateToken(){
